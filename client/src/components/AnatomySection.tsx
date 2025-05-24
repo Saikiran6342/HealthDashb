@@ -9,19 +9,13 @@ const AnatomySection: React.FC = () => {
         <div className="w-full md:w-1/2 flex justify-center items-center p-4">
           {/* Human body anatomy illustration */}
           <div className="relative w-48 h-80">
-            <svg viewBox="0 0 200 320" className="w-full h-full">
-              {/* Head/top circle */}
-              <circle cx="100" cy="45" r="25" fill="#FFD180" stroke="#E65100" strokeWidth="1" />
-              
-              {/* Body shape */}
-              <path d="M100,70 C140,70 140,120 140,160 C140,210 130,250 120,280 C110,300 100,310 100,310 C100,310 90,300 80,280 C70,250 60,210 60,160 C60,120 60,70 100,70 Z" 
-                fill="#FFE0B2" stroke="#E65100" strokeWidth="1" />
-              
-              {/* Face features */}
-              <circle cx="85" cy="85" r="3" fill="#795548" /> {/* Left eye */}
-              <circle cx="115" cy="85" r="3" fill="#795548" /> {/* Right eye */}
-              <line x1="80" y1="100" x2="120" y2="100" stroke="#795548" strokeWidth="1" /> {/* Mouth */}
-            </svg>
+            <div className="w-full h-full flex items-center justify-center">
+              <img 
+                src="https://cdn-academy.pressidium.com/academy/wp-content/uploads/2021/09/Abdomenal-Muscles.png" 
+                alt="Abdominal Muscles Anatomy" 
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
             
             {/* Health Indicators */}
             {healthIndicators.map((indicator, index) => (
