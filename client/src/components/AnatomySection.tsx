@@ -16,19 +16,6 @@ const AnatomySection: React.FC = () => {
                 className="max-w-full max-h-full object-contain"
               />
             </div>
-            
-            {/* Health Indicators */}
-            {healthIndicators.map((indicator, index) => (
-              <div 
-                key={index} 
-                className={`absolute ${indicator.position}`}
-              >
-                <div className="flex items-center">
-                  <span className={`w-3 h-3 ${indicator.colorClass} rounded-full`}></span>
-                  <span className="ml-2 text-xs whitespace-nowrap">{indicator.name}</span>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
         
