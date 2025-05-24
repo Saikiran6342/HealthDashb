@@ -41,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
               className="rounded-full w-10 h-10 object-cover" 
             />
             <div>
-              <p className="text-sm font-medium">Dr. Sarah Chen</p>
+              <p className="text-sm font-medium">Dr. Hemanth Teja</p>
               <p className="text-xs text-neutral-dark">Cardiologist</p>
             </div>
           </div>
