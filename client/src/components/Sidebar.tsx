@@ -1,9 +1,58 @@
 import React from 'react';
-import { navigationLinks } from '@/data/navigationLinks';
+import { LayoutGrid, History, CalendarDays, CheckSquare, PieChart, Beaker, MessageSquare, Headphones, Settings } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
 }
+
+// Define navigation links directly in the component to avoid import issues
+const navLinks = [
+  {
+    name: 'Dashboard',
+    icon: <LayoutGrid size={16} />,
+    active: true
+  },
+  {
+    name: 'History',
+    icon: <History size={16} />,
+    active: false
+  },
+  {
+    name: 'Calendar',
+    icon: <CalendarDays size={16} />,
+    active: false
+  },
+  {
+    name: 'Appointments',
+    icon: <CheckSquare size={16} />,
+    active: false
+  },
+  {
+    name: 'Statistics',
+    icon: <PieChart size={16} />,
+    active: false
+  },
+  {
+    name: 'Tests',
+    icon: <Beaker size={16} />,
+    active: false
+  },
+  {
+    name: 'Chat',
+    icon: <MessageSquare size={16} />,
+    active: false
+  },
+  {
+    name: 'Support',
+    icon: <Headphones size={16} />,
+    active: false
+  },
+  {
+    name: 'Settings',
+    icon: <Settings size={16} />,
+    active: false
+  }
+];
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
   return (
@@ -17,7 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
           <div>
             <p className="text-neutral-dark text-xs font-medium uppercase tracking-wider mb-4">General</p>
             <ul className="space-y-3">
-              {navigationLinks.map((link, index) => (
+              {navLinks.map((link, index) => (
                 <li 
                   key={index} 
                   className={`flex items-center ${link.active ? 'text-primary font-medium' : 'text-neutral-dark hover:text-primary transition-colors'}`}
