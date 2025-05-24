@@ -10,12 +10,17 @@ const AnatomySection: React.FC = () => {
           {/* Human body anatomy illustration */}
           <div className="relative w-48 h-80">
             <svg viewBox="0 0 200 320" className="w-full h-full">
-              <path d="M100,40 C130,40 150,70 150,100 C150,115 145,125 140,135 C135,145 130,155 130,170 C130,190 135,205 135,215 C135,230 130,240 125,250 C120,260 115,270 110,280 C105,290 100,300 100,300 C100,300 95,290 90,280 C85,270 80,260 75,250 C70,240 65,230 65,215 C65,205 70,190 70,170 C70,155 65,145 60,135 C55,125 50,115 50,100 C50,70 70,40 100,40 Z" 
+              {/* Head/top circle */}
+              <circle cx="100" cy="45" r="25" fill="#FFD180" stroke="#E65100" strokeWidth="1" />
+              
+              {/* Body shape */}
+              <path d="M100,70 C140,70 140,120 140,160 C140,210 130,250 120,280 C110,300 100,310 100,310 C100,310 90,300 80,280 C70,250 60,210 60,160 C60,120 60,70 100,70 Z" 
                 fill="#FFE0B2" stroke="#E65100" strokeWidth="1" />
-              <circle cx="100" cy="25" r="20" fill="#FFD180" stroke="#E65100" strokeWidth="1" />
-              <line x1="80" y1="90" x2="120" y2="90" stroke="#E65100" strokeWidth="1" />
-              <circle cx="90" cy="80" r="3" fill="#795548" />
-              <circle cx="110" cy="80" r="3" fill="#795548" />
+              
+              {/* Face features */}
+              <circle cx="85" cy="85" r="3" fill="#795548" /> {/* Left eye */}
+              <circle cx="115" cy="85" r="3" fill="#795548" /> {/* Right eye */}
+              <line x1="80" y1="100" x2="120" y2="100" stroke="#795548" strokeWidth="1" /> {/* Mouth */}
             </svg>
             
             {/* Health Indicators */}
